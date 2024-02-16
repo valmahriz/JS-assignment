@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+
+    <!-- CSS -->
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .counter {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      button {
+        font-size: 1em;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="counter">0</div>
+    <button onclick="increment()">Increment by +1</button>
+    <button onclick="decrement()">Decrement by -1</button>
+    <button onclick="reset()">Reset Value</button>
+
+    <!-- Javascript -->
+    <script>
+      const counterElement = document.getElementById("counter");
+
+      let counter = 0;
+
+      // Function to update counterElement
+      function updateCounter() {
+        counterElement.textContent = counter;
+      }
+
+      // Function to increment button
+      function increment() {
+        counter++;
+        updateCounter();
+      }
+
+      // Function to decrement button
+
+      function decrement() {
+        counter--;
+        updateCounter();
+      }
+
+      // Function to reset button
+
+      function reset() {
+        counter = 0;
+        updateCounter();
+      }
+    </script>
+  </body>
+</html>
